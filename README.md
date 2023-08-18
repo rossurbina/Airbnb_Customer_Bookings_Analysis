@@ -48,4 +48,4 @@ Based on all message chains between a customer and a host, 93% of hosts responde
 
 ## Data Visualization (Tableau)
 
-•	Used Tableau to generate various charts for both the searches and bookings data. Here is the [Tableau Dashboard]([url](https://public.tableau.com/app/profile/ross.urbina/viz/AirbnbSearchesandBookings-SampleData/AirbnbSearchesBookingsData)https://public.tableau.com/app/profile/ross.urbina/viz/AirbnbSearchesandBookings-SampleData/AirbnbSearchesBookingsData). 
+•	Used Tableau to generate various charts for both the searches and bookings data. Here is the [Tableau Dashboard]([url](https://public.tableau.com/app/profile/ross.urbina/viz/AirbnbSearchesandBookings-SampleData/AirbnbSearchesBookingsData). 
