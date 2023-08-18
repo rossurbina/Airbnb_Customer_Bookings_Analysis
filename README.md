@@ -1,6 +1,5 @@
-# Analysis on Searches & Bookings for Airbnb (Sample Data)
-MySQL file for analysis on Airbnb
-
+# Analysis on Searches & Bookings for Airbnb
+This data is search and bookings data for Airbnb in Dublin
 
 ## Purpose
 I found sample data on Airbnb’s searches and bookings data for Dublin, so I wanted to analyze it and answer questions on various topics. This type of analysis could help a company like Airbnb 1) understand what their customers are searching for and 2) what gives the highest percentage likelihood of converting initial requests into bookings. 
