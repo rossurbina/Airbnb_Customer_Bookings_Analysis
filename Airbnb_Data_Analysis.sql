@@ -356,13 +356,13 @@ id_listing,
 dow_in,
 dow_out,
 n_messages,
-SUM(n_messages) over msg_dow_window as sum_msg_dow,
-AVG(n_messages) over msg_dow_window as avg_msg_dow,
-max(n_messages) over msg_dow_window as max_msg_dow,
-row_number() over msg_dow_window as num_msg_dow,
-rank() over msg_dow_window as rank_msg_dow,
-dense_rank() over msg_dow_window as dns_rank_msg_dow,
-NTILE(100) over msg_dow_window as msg_perc_dow
+SUM(n_messages) OVER msg_dow_window AS sum_msg_dow,
+AVG(n_messages) OVER msg_dow_window AS avg_msg_dow,
+MAX(n_messages) OVER msg_dow_window AS max_msg_dow,
+ROW_NUMBER() OVER msg_dow_window AS num_msg_dow,
+RANK() OVER msg_dow_window AS rank_msg_dow,
+DENSE_RANK() OVER msg_dow_window AS dns_rank_msg_dow,
+NTILE(100) OVER msg_dow_window AS msg_perc_dow
 FROM contacts
 WINDOW msg_dow_window AS
-	(partition by dow_in order by n_messages);
+	(PARTITION BY dow_in ORDER BY n_messages);
