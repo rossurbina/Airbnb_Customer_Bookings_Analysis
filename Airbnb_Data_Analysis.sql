@@ -347,3 +347,22 @@ sum(num_booked) as total_booked
 FROM host_capacity
 GROUP BY 1
 ORDER BY 2 DESC;
+
+# Use a window function to make various calculations on the number of messages for each day of the week 
+
+SELECT id_guest,
+id_host,
+id_listing,
+dow_in,
+dow_out,
+n_messages,
+SUM(n_messages) over msg_dow_window as sum_msg_dow,
+AVG(n_messages) over msg_dow_window as avg_msg_dow,
+max(n_messages) over msg_dow_window as max_msg_dow,
+row_number() over msg_dow_window as num_msg_dow,
+rank() over msg_dow_window as rank_msg_dow,
+dense_rank() over msg_dow_window as dns_rank_msg_dow,
+NTILE(100) over msg_dow_window as msg_perc_dow
+FROM contacts
+WINDOW msg_dow_window AS
+	(partition by dow_in order by n_messages);
